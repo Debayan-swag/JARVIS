@@ -1,7 +1,7 @@
 import webbrowser , os , json
 from google import genai 
 
-client = genai.Client(api_key="YOUR - GEMINI - KEY")
+client = genai.Client(api_key=os.getenv("API_KEY"))
 # loads the memory of the jarvis from json file we have created
 try:
     if os.path.exists("jarvis_memory.json"):
